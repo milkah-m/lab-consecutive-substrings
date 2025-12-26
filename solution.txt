@@ -1,2 +1,24 @@
-Please add your pseudocode to this file
-And a written explanation of your solution
+consecutiveSubstrings: I have created a function called consecutive substrings. 
+
+LOGIC: This function follows these steps:
+   //takes in a string as an input
+   //converts the string into an array
+   //creates an empty array to store the results of the for loop
+   //loops through the string-array using a for loop inside an arrow function that is assigned to a constant variable
+   //each iteration of the for loop:
+      //uses .slice to copy the original string array from index 0 to 1+i (where i is the current element being iterated over)
+      //the result of the slice is joined into a string with no separators and then pushed into the array created to store the result
+      // this loop runs as long as i<stringArray.length, basically as long as each element has been iterated over
+  //initiate a while loop that lasts as long as the length of the original array is greater than 0
+      //this loop  runs the for loop and then removes the first element of the array (first word) until there are no elements left in the array
+  //the function returns the new array of consecutive substrings
+
+MY WHY: 
+I chose nested loops because they allowed me to work with the combinations that i encountered in this problem rather efficiently, 
+something that would not have been possible with a single loop. my for loop handles the individual cumulative array-building logic and my while loop handles the mutation.
+
+BIG O NOTATION: The big O notation for my function is O(n^2). 
+     //the scalable element is the length of newArray
+     //the while loop targets an element for each loop
+     //the for loop runs its logic inside that while loop each time
+     //the loop within a loop gives me a big O notation of O(n^2) because each loop runs n times and when I combine that, I get n^2. n here represents the length of the array
